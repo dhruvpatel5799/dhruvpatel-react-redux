@@ -30,21 +30,21 @@ export const ProductDetails = ({ match }) => {
 
     return (
         <>
-        <br />
-        <Row style={{maxWidth : "100%"}}>
-            <Col lg={8}>
-            <Image src={Images[product.id]} fluid />
-            </Col>
-            <Col lg={4}>
-            <h2>{product.name}</h2>
-            <p>Model : {product.model}</p>
-            <p>Price : ₹{product.price}</p>
-            <p>Description : {product.description}</p>
-            <Link to={`/`} className="btn btn-primary">
-                Back
-            </Link>
-            </Col>
-        </Row>
+            <Row style={{ maxWidth: "100%" }}>
+                <Col lg={8}>
+                    <Image src={Images[product.id]} fluid />
+                </Col>
+                <Col lg={4}>
+                    <br />
+                    <h2>{product.name}</h2>
+                    <p>Model : {product.model}</p>
+                    <p>Price : ₹{product.price}</p>
+                    <p>Description : {product.description}</p>
+                    <Link to={`/`} className="btn btn-primary">
+                        Back
+                    </Link>
+                </Col>
+            </Row>
         </>
     )
 }
