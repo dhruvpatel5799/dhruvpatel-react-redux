@@ -115,14 +115,14 @@ export const Products = () => {
     const popover = (
         <Popover id="popover-basic">
             <Popover.Header as="h3">My Cart</Popover.Header>
-            <Popover.Body style={{ display: cart.length === 0 ? 'blok' : 'none' }}>
+            <Popover.Body style={{ display: cart.length === 0 ? 'block' : 'none' }}>
                 You haven't added anything to cart.
                 Lets go Shopping!
             </Popover.Body>
-            <Popover.Body style={{ display: cart.length > 0 ? 'blok' : 'none' }}>
+            <Popover.Body style={{ display: cart.length > 0 ? 'block' : 'none' }}>
                 <Table striped bordered hover>
                     <thead>
-                        <tr>
+                        <tr className="table-primary">
                             <th>Product Name</th>
                             <th>Qty</th>
                             <th>Price</th>
@@ -166,7 +166,7 @@ export const Products = () => {
             <Row style={{ maxWidth: "100%" }}>
                 {
                     displayProducts.map(product =>
-                        <Col key={product.id}>
+                        <Col style={{ textAlign: "-webkit-center"}} key={product.id}>
                             <Card style={{ width: '18rem' }}>
                                 <Card.Img variant="top" src={Images[product.id]} />
                                 <Card.Body>
